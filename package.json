@@ -1,5 +1,5 @@
 {
-  "name": "budhub-app",
+  "name": "vibe-coded-garden-task-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,9 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "@google/genai": "^1.27.0",
-    "react": "^19.2.0"
+    "framer-motion": "^12.23.24"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",

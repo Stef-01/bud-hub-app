@@ -1,47 +1,56 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GitHub Repo Creator</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suburban Eden AI</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'gray-900': '#161b22',
-            'gray-800': '#21262d',
-            'gray-700': '#30363d',
-            'gray-600': '#484f58',
-            'gray-400': '#8b949e',
-            'gray-200': '#c9d1d9',
-            'blue-500': '#58a6ff',
-            'blue-600': '#388bfd',
-            'green-500': '#3fb950',
-            'green-600': '#26a641',
-          },
-          fontFamily: {
-            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji'],
-            mono: ['SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', 'monospace'],
-          }
-        }
-      }
+  <style>
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
-  </script>
-<script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.27.0",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0"
+    /* Custom scrollbar for a cleaner look */
+    .custom-scrollbar::-webkit-scrollbar {
+      height: 8px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f5f9; /* gray-100 */
+      border-radius: 10px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #94a3b8; /* gray-400 */
+      border-radius: 10px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #64748b; /* gray-500 */
+    }
+    /* Keyframes for the infinite scroll animation */
+    @keyframes infinite-scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    .animate-infinite-scroll {
+      animation: infinite-scroll 120s linear infinite;
+    }
+  </style>
+  <script type="importmap">
+  {
+    "imports": {
+      "react": "https://aistudiocdn.com/react@^19.2.0",
+      "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+      "react/": "https://aistudiocdn.com/react@^19.2.0/",
+      "@google/genai": "https://aistudiocdn.com/@google/genai@^1.27.0",
+      "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24"
+    }
   }
-}
-</script>
+  </script>
+<link rel="stylesheet" href="/index.css">
 </head>
-<body class="bg-gray-900 text-gray-200 font-sans">
+<body>
   <div id="root"></div>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <script type="module" src="./index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
 </body>
 </html>
